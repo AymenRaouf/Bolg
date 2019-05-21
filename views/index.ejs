@@ -1,0 +1,38 @@
+<%include partials/header%>
+
+<h1>INDEX PAGE</h1>
+<div class="ui top attached segment">
+    <div class="ui devided unstackable items">
+        <%blogs.forEach(function (blog) {%>
+        <div class="item">
+            <div class="ui small image">
+                <img src="<%=blog.image%>">
+            </div>
+            <div class="content">
+                <div class="content">
+                    <div class="header">
+                        <a href="/blogs/<%=blog._id%>"><%=blog.title%></a>
+                    </div>
+                </div>
+                <div class="stay">
+                    <span><%=blog.created.toDateString()%></span>
+                </div>
+                <div class="description">
+                    <p><%=blog.blog.substring(0,100)%>...</p>
+                </div>
+                <div class="extra">
+                    <a class="ui right floated primary button" href="/blogs/<%=blog._id%>">
+                        Continue Reading <i class="right chevron icon"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <% })%>
+    </div>
+</div>
+
+
+
+<%include partials/footer%>

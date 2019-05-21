@@ -1,0 +1,22 @@
+<%include partials/header%>
+
+<div class="ui main text container segment" xmlns="http://www.w3.org/1999/html">
+    <div class="ui huge header">New Blog</div>
+    <form class="ui form" action="/blogs" method="post">
+        <div class="field">
+            <label>title</label><br>
+            <input type="text" name="blog[title]" placeholder="title">
+        </div>
+        <div class="field">
+            <label>image</label>
+            <input type="text" name="blog[image]" placeholder="image">
+        </div>
+        <div class="field">
+            <label>blog content</label>
+            <textarea name="blog[blog]" placeholder="blog content goes here"></textarea>
+        </div>
+        <input class="ui blue button" type="submit" value="Add Blog">
+    </form>
+</div>
+
+<%include partials/footer%>
